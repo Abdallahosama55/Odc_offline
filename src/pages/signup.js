@@ -8,8 +8,12 @@ import Logo from '../assets/ODC Logo (2).png';
 import img_illstration from '../assets/Group (2).png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './login.js';
+import Dashboard from './dashboard';
+import Navbar from '../components/navbar.js';
 function Signup() {
     const [showLogin, setShowLogin] = useState(false);
+    const [showdashbored, setShowDash] = useState(false);
+
 
   const handleLoginClick = () => {
     setShowLogin(true);
@@ -18,6 +22,16 @@ function Signup() {
   if (showLogin) {
     return <Login/>;
   }
+
+  
+  const handleDashClick = () => {
+    setShowDash(true);
+  };
+
+  if (showdashbored) {
+    return <Navbar/>;
+  }
+
   return (
     <Container>
       <Row>
@@ -112,7 +126,7 @@ function Signup() {
  
   </div>
 
-  <button type="submit" class="btn  btn-block login-btn">Create an account</button>
+  <button type="submit" class="btn  btn-block login-btn" onClick={handleDashClick}>Create an account</button>
   <div class="col">
 <br></br>
   <p>Do have an account? <a href="#!" className='link-login' onClick={handleLoginClick}><strong>Login</strong></a></p>
