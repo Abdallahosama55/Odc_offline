@@ -12,8 +12,16 @@ import img_ill_2 from '../assets/Clip path group.png';
 import OtpInput from 'react-otp-input';
 import Signup from './signup.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useEffect, useRef } from 'react';
+
+
+
+
 
 function Forget() {
+
+
+
   const [isVerified, setIsVerified] = useState(false);
   const [otp, setOtp] = useState('');
   const [showSlideTwo, setShowSlideTwo] = useState(false);
@@ -241,7 +249,6 @@ function Forget() {
               </button>
            
                 </div>
-               
               
               </form>
 
